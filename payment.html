@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <title>Restaurantista</title>
+  <link rel="stylesheet" href="payment.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width , intital-scale=1.0">
+</head>
+<body>
+	<div id="header-placeholder"></div>
+	
+    <form id="payment-form" action="">
+      <label for="name">Name on card:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="card-number">Card number</label>
+      <input type="text" id="card-number" name="card-number" pattern="[0-9]{13,16}" required>
+
+      <label for="cvc">CVC:</label>
+      <input type="number" id="cvc" name="cvc" pattern="[0-9]{3,4}" required>
+
+      <label for="expiration-date">Expiration date</label>
+      <input type="text" id="expiration-date" name="expiration-date" placeholder="MM/YY" required>
+
+      <button type="submit" id="pay-button">Pay</button>
+    </form>
+
+    <div id="success-message" style="display: none;">
+        <p>
+            Thank you for your payment. Your order will be delivered within 1 hour.
+        </p>
+    </div>
+	<div id="footer-placeholder"></div>
+</body>
+<script src="payment.js"></script>
+<script src="template.js"></script>
+</html>

@@ -1,0 +1,308 @@
+body {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Style the header */
+  header {
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+  }
+  
+  .burger {
+    display: none;
+  }
+  
+  .text-up {
+    font-size: 3.4em;
+    margin-bottom: 0.5em;
+    color: white;
+    background-color: #ff8000;
+    text-align: center;
+  }
+  
+  #user-box {
+    text-align: right;
+  }
+  
+  /* Style the main content area */
+  main {
+    margin-top: 120px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  #menu-div {
+    flex: 0 0 60%;
+    margin-bottom: 20px;
+    background-color: white;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  #menu-image {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: 100px;
+    width: 100%; /* Adjust the width as per your preference */
+    object-fit: cover;
+  }
+  
+  #cafe-info {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  select {
+    display: block;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 1.2em;
+    border: none;
+    background-color: #FF8000;
+    color: white;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  select:hover {
+    background-color: #379AD5;
+  }
+  
+  select option {
+    background-color: #FF8000;
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+  
+  select option:hover {
+    background-color: #379AD5;
+  }
+  #menu-items li {
+    flex: 0 0 45%;
+    margin: 15px;
+    padding: 10px;
+    border: 2px solid #379AD5;
+    border-radius: 10px;
+    background-color: #FFF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    position: relative;
+    list-style: none;
+  }
+  
+  #menu-items li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  #menu-items li span {
+    display: block;
+    font-size: 18px;
+    margin-top: 10px;
+    color: #333;
+  }
+  
+  #menu-items li button {
+    width: 40px;
+    height: 40px;
+    background-color: #FF8000;
+    border: none;
+    color: #FFF;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.1s;
+    position: absolute;
+    bottom: 23px;
+    left: 80%;
+    transform: translateX(-50%);
+    margin-bottom: 60px;
+  }
+  
+  #menu-items li button:hover {
+    background-color: #379AD5;
+  }
+  
+  #menu-items li p {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .menu-item-name {
+    font-weight: bold;
+    flex: 1;
+  }
+  
+  .menu-item-price {
+    font-weight: bold;
+    margin-left: 10px;
+  }
+  
+  /* Style the fixed basket section */
+  
+  #basket-section {
+    flex: 0 0 25%;
+    margin-left: 20px;
+    background-color: white;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  #basket-items {
+    list-style: none;
+    padding: 0;
+    margin-top: 95px;
+    position: relative; /* Add position relative */
+  }
+  
+  #basket-items li {
+    height: 40px;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid #379AD5;
+    border-radius: 5px;
+    background-color: #FFF;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    font-size: 18px;
+    font-weight: bold;
+    position: relative; /* Add position relative */
+    z-index: 1; /* Add z-index to keep items above the pay button */
+  }
+  #total-price {
+    color: #379AD5;
+    font-size: 24px;
+    font-weight: bold;
+    position: sticky; /* Add position sticky */
+    top: 0; /* Stick the total price section to the top */
+    background-color: #FFF; /* Add a background color to separate from the basket items */
+    padding: 10px;
+    z-index: 2; /* Ensure the total price section is above the basket items */
+  }
+  #subtotal-price,
+  #tax-price,
+  #totali-price {
+    font-weight: bold;
+  }
+  
+  #checkout {
+    background-color: #ff8000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #checkout:hover {
+    background-color: #ff9933;
+  }
+  button.add,
+  button.remove {
+    width: 40px;
+    height: 40px;
+    float: right;
+    background-color: #FF8000;
+    color: white;
+    padding: 10px 12px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button.add:hover,
+  button.remove:hover {
+    background-color: #379AD5;
+  }
+  
+  button.add {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  
+  button.remove {
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+  
+  .icon-wrap {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .icon-wrap a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin-right: 10px;
+    box-shadow: 0 2px 4px blue;
+    transition: all 0.3s ease;
+  }
+  
+  .icon-wrap a:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+  }
+  
+  .icon-wrap a:last-child {
+    margin-right: 0;
+  }
+  
+  .icon-wrap i {
+    color: #888;
+    font-size: 24px;
+  }
+  
+  .icon-wrap a:hover i {
+    color: #fff;
+  }
+  #search {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border-color: #FF8000;
+  }

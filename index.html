@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Restaurantista</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width , intital-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@100&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+ <main>
+  <section class="restaurant-section">
+    <div id="restaurant-info">
+      <h1 >Restaurantista</h1>
+      <h3>Your digital restaurant.</h3>
+      <button class="modern-button" onclick="openModal()">Order Here</button>
+    </div>
+    <div id="restaurant-image">
+      <img src="photos//hamburger-web-devs-mmks.png" alt="Restaurant Image">
+      <div class="image-overlay">
+        <span class="overlay-text">Savor the flavors of our passion</span>
+      </div>
+    </div>
+  </section>
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>Welcome to our Amazing Digital Restaurant!</h2>
+      <p>At our restaurant, we strive to provide you with the best dining experience. Our talented chefs create
+        mouthwatering dishes using fresh ingredients sourced locally. Whether you're looking for a romantic dinner or
+        a casual lunch, we have the perfect ambiance to suit your needs. Come and indulge in a culinary journey like
+        no other!</p>
+      <h3>Find Us:</h3>
+      <a href="menu.html">
+        <button class="log-button">Order Here</button>
+      </a>
+    </div>
+  </div>
+  <div class="text">
+    <h1>Order with Ease.</h1>
+    <p>Experience the convenience of ordering your favorite dishes with just a few clicks.</p>
+  </div>
+  <div class="order-process-overview">
+    <div class="order-process">
+      <span class="icon"><img src="/icons/pasta.svg" alt="Pasta"></span>
+      <h3>Choose</h3>
+      <p>Select your favorite dishes.</p>
+    </div>
+    <div class="order-process">
+      <span class="icon"><img src="/icons/pizza.svg" alt="Pizza"></span>
+      <h3>Order</h3>
+      <p>Use our website to experience a smooth online ordering.</p>
+    </div>
+    <div class="order-process">
+      <span class="icon"><img src="/icons/risotto.svg" alt="Risotto"></span>
+      <h3>Pay</h3>
+      <p class="smaller">Our payment service ensures a seamless and hassle-free process</p>
+    </div>
+  </div>
+  <div class="original-taste">
+    <div class="content">
+      <h2>Original Taste</h2>
+      <p>Feel exited to taste our amazing food and order online now!</p>
+      <a href="menu.html" class="button">Order Online</a>
+    </div>
+  </div>
+  <section class="statistics">
+    <div class="container">
+      <h2 class="section-header">We like numbers. How about you?</h2>
+      <p class="section-description">We served to amazing people who appriciate and loved our food, our success is
+        bigger with you.</p>
+      <div class="statistics-wrapper">
+        <div class="statistic">
+          <div class="statistic-number">78.000</div>
+          <div class="statistic-text">Happy Customers</div>
+        </div>
+        <div class="statistic">
+          <div class="statistic-number">52</div>
+          <div class="statistic-text">Delicious Dishes</div>
+        </div>
+        <div class="statistic">
+          <div class="statistic-number">638.000</div>
+          <div class="statistic-text">Orders</div>
+        </div>
+        <div class="statistic">
+          <div class="statistic-number">7.800</div>
+          <div class="statistic-text">Daily Website Visitors</div>
+        </div>
+        <div class="statistic">
+          <div class="statistic-number">0</div>
+          <div class="statistic-text">Physical Locations</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="about-us" id="about-us">
+    <div class="background-image"></div>
+    <div class="about-us-content">
+      <h2>About Us</h2>
+      <h1>The Restaurant that never existed.</h1>
+      <p>
+        Welcome to Restaurantista - where culinary delights meet the digital realm. Our story begins with a passion for exceptional food and 
+        a vision to bring delectable flavors directly to your doorstep. As a fully online restaurant, we have reimagined the dining experience, 
+        eliminating the need for physical locations and embracing the convenience of the virtual world.
+      </p>
+      <p>  
+        At Restaurantista, we understand the fast-paced nature of modern life, where time is a precious commodity. 
+        With this in mind, we set out to create an innovative platform that seamlessly connects food lovers with a diverse menu of tantalizing 
+        dishes, all available at the click of a button.
+      </p>
+    </div>
+  </section>
+  <section class="newsletter-section">
+    <h2>Subscribe to our Newsletter</h2>
+    <form id="newsletter-form" action="#" method="post">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email">
+      <label for="checkbox">Subscribe to Newsletter:</label>
+      <input type="checkbox" id="checkbox" name="newsletter" value="yes" >
+      <input type="submit" value="Subscribe">
+    </form>
+    <div id="message-container"></div> <!-- Message container -->
+  </section>
+  <div class="location">
+    <div class="address">
+      <h2>Location</h2>
+      <p>123 Main St.</p>
+      <p>Anytown, USA 12345</p>
+      <h2>Call Us</h2>
+      <a href="tel:+1234567890">123-456-7890</a>
+      <h2>Hours of Operation</h2>
+      <p>24/7</p>
+    </div>
+    <div class="map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3470.932831763234!2d-81.08707368471138!3d32.0815734067472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88fe8a284e36ddcb%3A0x61a7f8c93dc98622!2sThe%20Olde%20Pink%20House!5e0!3m2!1sen!2sus!4v1630736766306!5m2!1sen!2sus"
+        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </div>
+  </section>
+  <section class="video">
+    <div class="video__content">
+      <h2 class="video__header">Turn Your Home into a Restaurant.</h2>
+      <p class="video__text">
+        Are you the kind of person who relishes the joy of savoring delicious food in the comfort of your own home? If you prefer to escape 
+        the hustle and bustle of overcrowded restaurants, say goodbye to the stress of making reservations, and indulge in the convenience of 
+        dining at your own pace, then you've come to the right place.
+      </p>
+      <div class="video__player">
+        <video class="video__iframe" src="/photos/promo-video-restaurantista.mp4" autoplay loop muted></video>
+      </div>
+    </div>
+  </section>
+  <section class="contact-form">
+    <h2>Contact Us</h2>
+    <form action="#" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="subject">Subject:</label>
+      <input type="text" id="subject" name="subject" required>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+      <input type="submit" value="Send">
+    </form>
+  </section>
+  <section class="testimonials">
+    <div class="container">
+      <h1>Testimonials</h1>
+      <div class="testimonial-container">
+        <div class="testimonial-text">
+          <p>“The best way to give your testimonial a boost is by adding a compelling summary sub-headline above it.
+            This could be as simple as pulling a powerful quote from a longer testimonial or creating your own copy
+            that nicely sums up the value of the testimonial."</p>
+          <hr>
+          <div class="testimonial-box">
+            <img src="/photos/person1.jpg" alt="Person 1">
+            <div class="testimonial-content">
+              <p class="author-name">Joana Doe</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-text">
+          <p>"Hi there, Bob.
+            I’m writing to ask if you wouldn’t mind giving us a short testimonial for our website. We’re updating a
+            few pages, and I’m hoping to add something from you. It would link back to your site, so it’s actually a
+            good thing for your SEO."</p>
+          <hr>
+          <div class="testimonial-box">
+            <img src="/photos/person2.jpg" alt="Person 2">
+            <div class="testimonial-content">
+              <p class="author-name">Jane Smith</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-text">
+          <p>"I just wanted to share a quick note and let you know that you guys do a really good job. I’m glad I
+            decided to work with you. It’s really great how easy your websites are to update and manage. I never have
+            any problem at all."</p>
+          <hr>
+          <div class="testimonial-box">
+            <img src="/photos/person3.jpg" alt="Person 3">
+            <div class="testimonial-content">
+              <p class="author-name">Mike Johnson</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-text">
+          <p>"A testimonial is an honest endorsement of your product or service that usually comes from a customer,
+            colleague, or peer who has benefited from or experienced success as a result of the work you did for
+            them."</p>
+          <hr>
+          <div class="testimonial-box">
+            <img src="/photos/person4.jpg" alt="Person 4">
+            <div class="testimonial-content">
+              <p class="author-name">Mary Johnson</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ </main>
+ <div id="footer-placeholder"></div>
+</body>
+<script src="script.js"></script>
+<script src="ajax.js"></script>
+<script src="template.js"></script>
+</html>
